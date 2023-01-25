@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Calculator {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a");
+		int a = sc.nextInt();
+		System.out.println("Enter b");
+		int b = sc.nextInt();
+		System.out.println("Choose Your Case\n 1.Add\n 2.Subtraction \n 3.Multiplication \n 4.Division");
+		int operator = sc.nextInt();
+
+		switch (operator) {
+		case 1:
+			System.out.println(a + b);
+			break;
+		case 2:
+			System.out.println(a - b);
+			break;
+		case 3:
+			System.out.println(a * b);
+			break;
+		case 4:
+			if (b == 0) {
+				System.out.println("Invalid division");
+			} else {
+				System.out.println(a / b);
+			}
+			break;
+
+		case 5:
+			if (b == 0) {
+				System.out.println("Invalid division");
+			} else {
+				System.out.println(a % b);
+			}
+			break;
+		default:
+			System.out.println("Invalid Operator");
+		}
+	}
+}
